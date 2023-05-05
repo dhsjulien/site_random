@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title> Durée du dl </title>
+	<meta name="viewport" content="width=device-width" />
+	<style>
+		.menu{
+			display:flex;
+			padding:0;
+			background-color:#ccc;
+			list-style-type: none;
+			justify-content: space-around;
+		}
+		.menu a {
+			display:block;
+			min-width: 120px; 
+			margin: 0.5rem;
+			padding:0.4rem 0;
+			text-align: center;
+			background-color:grey;
+			color:#fff;
+			text-decoration: none;
+
+		}
+		body{
+		background-color: grey;}
+		form.form-example {
+    		display: table;
+		}
+
+		div.form-example {
+		    display: table-row;
+		}
+
+		label,
+		input {
+		    display: table-cell;
+		    margin-bottom: 10px;
+		}
+
+		label {
+		    padding-right: 10px;
+		}
+		.menu a:hover {
+			background-color: #ed2794;
+			color: #ffe843;
+			border-color: #ffe843;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="menu">
+		<li>
+			<a href="index.html">Accueil </a>
+		</li>
+		<li>
+			<a href="goAndmo.html">Calcul dl </a>
+		</li>
+		<li>
+			<a href="Calories.html">Calories </a>
+		</li>
+		<li>
+			<a href="goAndmo.html">trololo </a>
+		</li>
+	</ul>	
+<form class="form-example">
+  <div class="form-example">
+    <h1>
+    <label for="go">Entrez la taille de votre fichier ou de votre m-a-j en giga octets: </label>
+    <input type="text" id="go" required autofocus>
+    <h1>
+  </div>
+  <div class="form-example" id>
+    <h1>
+    <label for="mo">Entrez votre vitesse de telechargement en mo/s: </label>
+    <input type="text" id="mo" required>
+  	</h1>
+  </div>
+  <div class="form-example">
+    <button type="button" onclick="functionExe()">Calculer</button>
+  </div>
+</form>
+<script>
+	function functionExe(){
+		var go,mo,bit_fichier,bits_connexion,n,s,m0,m,h;
+		go = document.getElementById("go").value;
+		mo = document.getElementById("mo").value;
+
+		bits_fichier = go * 8000000;
+		bits_connexion = mo * 8000;
+		n = bits_fichier / bits_connexion;
+		m0 = parseInt(n)/60;
+		s=parseInt(n)%60;
+		h = parseInt(m0)/60;
+		m = parseInt(m0)%60;
+		alert("Nombre d'heure : "+parseInt(h) + ' \nNombre de minutes : '+parseInt(m)+'\nNombre de secondes : '+parseInt(s));
+	}
+
+
+</script>
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 42ae230 (ajout du menu qui sera sur toutes les pages)

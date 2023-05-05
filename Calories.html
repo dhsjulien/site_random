@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width" />
+<style>
+		.menu{
+			display:flex;
+			padding:0;
+			background-color:#ccc;
+			list-style-type: none;
+			justify-content: space-around;
+		}
+		.menu a {
+			display:block;
+			min-width: 120px; 
+			margin: 0.5rem;
+			padding:0.4rem 0;
+			text-align: center;
+			background-color:grey;
+			color:#fff;
+			text-decoration: none;
+
+		}
+		body{
+		background-color: grey;}
+		form.form-example {
+    		display: table;
+		}
+
+		div.form-example {
+		    display: table-row;
+		}
+
+		label,
+		input {
+		    display: table-cell;
+		    margin-bottom: 10px;
+		}
+
+		label {
+		    padding-right: 10px;
+		}
+		.menu a:hover {
+			background-color: #ed2794;
+			color: #ffe843;
+			border-color: #ffe843;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="menu">
+		<li>
+			<a href="index.html">Accueil </a>
+		</li>
+		<li>
+			<a href="goAndmo.html">Calcul dl </a>
+		</li>
+		<li>
+			<a href="Calories.html">Calories </a>
+		</li>
+		<li>
+			<a href="goAndmo.html">trololo </a>
+		</li>
+	</ul>
+	<h1>
+		<label for="marche">Nombre de marche d'escalier que vous avez franchi  : </label>
+		<input type="text" id="marche" required autofocus>
+	</h1>
+	<button type="button" onclick="caloriesMarche()">Calculer le nombre de kcal</button>
+	<script>
+		function caloriesMarche(){
+			var marche = document.getElementById("marche").value;
+			var kcal;
+			kcal = marche *0.15;
+			alert("Vous avez brûlé "+parseInt(kcal)+" kcal");
+		}
+
+	</script>
+</body>
+
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 42ae230 (ajout du menu qui sera sur toutes les pages)
