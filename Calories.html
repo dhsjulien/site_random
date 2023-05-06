@@ -78,6 +78,7 @@
 		<label for="marche">Nombre de marche d'escalier que vous avez franchi  : </label>
 		<input type="text" id="marche" required autofocus>
 	</h1>
+	<p> Rappel : le besoin énergétique moyen se situe entre 2400 et 2700 kcal pour un homme et entre 2000 et 2200kcal pour une femme </p>
 	<button type="button" onclick="caloriesMarche()">Calculer le nombre de kcal</button>
 	<p id ="phrase_kcal"></p>
 	<img id="image" src="" width="250">
@@ -91,13 +92,21 @@
 			var image=document.getElementById("image");
 			kcal = marche *0.15;
 			phrase_kcal.innerHTML="Vous avez brûlé "+parseInt(kcal)+" kcal";
-			if (kcal < 100){
-				image.src="Frites-maison.jpg";
-				phrase_motivation.innerHTML="Bien joué gros sac, ça équivaut à quelques frites ce que t'as brûlé en calories";
+			if (kcal < 1 && kcal!=0){
+				image.src="cafe.jpg";
+				phrase_motivation.innerHTML="T'as éliminé un café noir sans sucre, continue de te dégourdir les pattes !";
+			}
+			else if ((kcal>1 && kcal<30) || kcal==1){
+				image.src="fraise.png";
+				phrase_motivation.innerHTML="Tu as dépensé l'équivalent d'une fraise (Image généré avec DALL E openai, toute ressemblance avec un être humain est fortuite)";
+			}
+			else if(kcal == 0){
+				image.src="harcelement.jpg";
+				phrase_motivation.innerHTML="Qu'est ce que tu attends pour monter des marches espèce de feignasse ??";
 			}
 			else{
-				image.src="Big_Mac_hamburger.jpg";
-				phrase_motivation.innerHTML="bien joué, t'as dépensé l'équivalent d'un big mac";
+				image.src="sportif.jpg";
+				phrase_motivation.innerHTML="Vous êtes un vrai sportif vous !";
 			}
 		}
 
