@@ -79,12 +79,26 @@
 		<input type="text" id="marche" required autofocus>
 	</h1>
 	<button type="button" onclick="caloriesMarche()">Calculer le nombre de kcal</button>
+	<p id ="phrase_kcal"></p>
+	<img id="image" src="" width="250">
+	<div id="phrasemotivation"></div>
 	<script>
 		function caloriesMarche(){
 			var marche = document.getElementById("marche").value;
 			var kcal;
+			var phrase_motivation = document.getElementById("phrasemotivation");
+			var phrase_kcal =document.getElementById("phrase_kcal");
+			var image=document.getElementById("image");
 			kcal = marche *0.15;
-			alert("Vous avez brûlé "+parseInt(kcal)+" kcal");
+			phrase_kcal.innerHTML="Vous avez brûlé "+parseInt(kcal)+" kcal";
+			if (kcal < 100){
+				image.src="Frites-maison.jpg";
+				phrase_motivation.innerHTML="Bien joué gros sac, ça équivaut à quelques frites ce que t'as brûlé en calories";
+			}
+			else{
+				image.src="Big_Mac_hamburger.jpg";
+				phrase_motivation.innerHTML="bien joué, t'as dépensé l'équivalent d'un big mac";
+			}
 		}
 
 	</script>
