@@ -4,34 +4,11 @@
 
 <head>
 <meta name="viewport" content="width=device-width" />
-<style>
-		.menu{
-			display:flex;
-			padding:0;
-			background-color:#ccc;
-			list-style-type: none;
-			
-		}
-		.menu a {
-			display:block;
-			min-width: 120px; 
-			margin: 0.5rem;
-			padding:0.4rem 0;
-			text-align: center;
-			background-color:grey;
-			color:#fff;
-			text-decoration: none;
+	<style>
 
-		}
 		body{
 		background-color: grey;}
-		form.form-example {
-    		display: table;
-		}
 
-		div.form-example {
-		    display: table-row;
-		}
 
 		label,
 		input {
@@ -42,16 +19,46 @@
 		label {
 		    padding-right: 10px;
 		}
-		.menu a:hover {
-			background-color: #ed2794;
-			color: #ffe843;
-			border-color: #ffe843;
+
+		*{
+			margin:0px;
+			padding:0px;
+			font-family: Avenir, sans-serif;
 		}
+		.test ul{
+			list-style-type: none;
+		}
+		.test li{
+			float: left;
+			width: 10%;
+			text-align: center;
+		}
+		.test ul::after{
+			content:"";
+			display: table;
+			clear: both;
+		}
+		.test{
+			width: 100%;
+			margin: 0 auto;
+
+		}
+		.test a{
+			display: block;
+			text-decoration: none;
+			color: white;
+		}
+		.test a:hover{
+			color: orange;
+			border-bottom: 2px solid gold;
+		}
+
 	</style>
 </head>
 
 <body>
-	<ul class="menu">
+	<div class ="test">
+	<ul>
 		<li>
 			<a href="index.html">Accueil </a>
 		</li>
@@ -74,14 +81,22 @@
 			<a href="">Soon </a>
 		</li>		
 	</ul>
+	</div>
+	<br />
+	<br />
 	<h1>
 		<label for="marche">Nombre de marche d'escalier que vous avez franchi  : </label>
+		<br />
 		<input type="text" id="marche" required autofocus>
 	</h1>
 	<p> Rappel : le besoin énergétique moyen se situe entre 2400 et 2700 kcal pour un homme et entre 2000 et 2200kcal pour une femme </p>
+	<br />
 	<button type="button" onclick="caloriesMarche()">Calculer le nombre de kcal</button>
+	<br />
+	<br />
 	<p id ="phrase_kcal"></p>
-	<img id="image" src="" width="250">
+	<br />
+	<img id="image" src="" width="500">
 	<div id="phrasemotivation"></div>
 	<script>
 		function caloriesMarche(){

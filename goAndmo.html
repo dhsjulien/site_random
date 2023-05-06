@@ -6,24 +6,40 @@
 	<title> Durée du dl </title>
 	<meta name="viewport" content="width=device-width" />
 	<style>
-		.menu{
-			display:flex;
-			padding:0;
-			background-color:#ccc;
-			list-style-type: none;
-			
+
+		*{
+			margin:0px;
+			padding:0px;
+			font-family: Avenir, sans-serif;
 		}
-		.menu a {
-			display:block;
-			min-width: 120px; 
-			margin: 0.5rem;
-			padding:0.4rem 0;
+		.test ul{
+			list-style-type: none;
+		}
+		.test li{
+			float: left;
+			width: 10%;
 			text-align: center;
-			background-color:grey;
-			color:#fff;
-			text-decoration: none;
+		}
+		.test ul::after{
+			content:"";
+			display: table;
+			clear: both;
+		}
+		.test{
+			width: 100%;
+			margin: 0 auto;
 
 		}
+		.test a{
+			display: block;
+			text-decoration: none;
+			color: white;
+		}
+		.test a:hover{
+			color: orange;
+			border-bottom: 2px solid gold;
+		}
+
 		body{
 		background-color: grey;}
 		form.form-example {
@@ -43,16 +59,13 @@
 		label {
 		    padding-right: 10px;
 		}
-		.menu a:hover {
-			background-color: #ed2794;
-			color: #ffe843;
-			border-color: #ffe843;
-		}
+
 	</style>
 </head>
 
 <body>
-	<ul class="menu">
+	<div class="test">
+	<ul>
 		<li>
 			<a href="index.html">Accueil </a>
 		</li>
@@ -74,7 +87,10 @@
 		<li>
 			<a href="">Soon </a>
 		</li>		
-	</ul>	
+	</ul>
+	</div>
+	<br />
+	<br />
 <form class="form-example">
   <div class="form-example">
     <h1>
@@ -84,6 +100,8 @@
   </div>
   <div class="form-example" id>
     <h1>
+    <br />
+    <br />
     <label for="mo">Entrez votre vitesse de telechargement en mo/s: </label>
     <input type="text" id="mo" required>
   	</h1>
