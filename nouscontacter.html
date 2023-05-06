@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width" />
+  <style>
+
+    *{
+      margin:0px;
+      padding:0px;
+      font-family: Avenir, sans-serif;
+    }
+    .test ul{
+      list-style-type: none;
+    }
+    .test li{
+      float: left;
+      width: 10%;
+      text-align: center;
+    }
+    .test ul::after{
+      content:"";
+      display: table;
+      clear: both;
+    }
+    .test{
+      width: 100%;
+      margin: 0 auto;
+
+    }
+    .test a{
+      display: block;
+      text-decoration: none;
+      color: white;
+    }
+    .test a:hover{
+      color: orange;
+      border-bottom: 2px solid gold;
+    }
+
+    body{
+      background-color: grey;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="test">
+  <ul class="menu">
+    <li>
+      <a href="index.html">Accueil </a>
+    </li>
+    <li>
+      <a href="goAndmo.html">Calcul dl </a>
+    </li>
+    <li>
+      <a href="Calories.html">Calories </a>
+    </li>
+
+    <li>
+      <a href="nouscontacter.html">Nous contacter </a>
+    </li>
+    <li>
+      <a href="">Soon </a>
+    </li>
+    <li>
+      <a href="">Soon </a>
+    </li>
+    <li>
+      <a href="">Soon </a>
+    </li>   
+  </ul>
+  </div>
+  <br />
+  <br />
+  <p>
+  Si vous avez la moindre question ou une idée d'amélioration du site n'hésitez pas à me contacter ! </p>
+  <br />
+  <br />
+
+  <form
+  action="https://formspree.io/f/mwkjyaya"
+  method="POST"
+>
+  <label>
+    Votre email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Votre message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Envoyer</button>
+</form>
+</body>
